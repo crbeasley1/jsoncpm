@@ -42,6 +42,7 @@
                     </tableView>
                     <connections>
                         <outlet property="searchDisplayController" destination="9ER-w5-xxY" id="xDm-rA-0j2"/>
+                        <outlet property="searchText" destination="9ER-w5-xxY" id="6VW-Ho-2oj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3d-zE-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>

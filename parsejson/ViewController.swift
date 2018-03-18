@@ -9,7 +9,9 @@
 import UIKit
 import Foundation
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+    
+    @IBOutlet var searchText: UISearchController!
     
     var tableArray = [String] ()
 
@@ -24,7 +26,7 @@ class ViewController: UITableViewController {
     
     func parseJSON () {
         
-        let url = URL(string: "https://api.github.com/user/repos")
+        let url = URL(string: "https://api.github.com")
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error ) in
 
             
@@ -53,7 +55,7 @@ class ViewController: UITableViewController {
             self.tableArray = array
         } else {
             
-            print("Json is not loading")
+            print("Json is not displaying")
             
             }
         
